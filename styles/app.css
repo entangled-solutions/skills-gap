@@ -17,7 +17,10 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
+  margin-left: 20px;
   font-size: 28px;
+  position: fixed;
+  z-index: 9999;
 }
 
 h2 {
@@ -80,6 +83,7 @@ button {
   font-size: 12px;
   border-radius: 2px;
   z-index: 999;
+  width: 200px;
 }
 
 .orange {
@@ -90,10 +94,24 @@ button {
   color: steelblue;
 }
 
-#bigtable2{
-  overflow-x: scroll;
-  width: 1200px;
+.clusterblock {
+  float: left;
 }
+
+#bigtable{
+  padding-top: 50px;
+  overflow-x: scroll;
+  width: 15000px;
+  margin-left: 200px;
+}
+
+#c0 {
+  padding-top: 50px;
+  position: fixed;
+  background-color: white;
+  z-index: 999;
+}
+
 .jobs {
   position: relative;
   float: left;

@@ -26,6 +26,29 @@ d3.queue()
 		skills.push(d.skill);
 	})
 
+	var sidebar = d3.select("#c0").append("svg")
+			.attr("class", "jobs")
+			.attr("width", 190)
+			.attr("height", 750)
+
+	sidebar.append("text")
+			.attr("x", 190)
+			.attr("y", 230)
+			.style("text-anchor", "end")
+			.style("font-size", 20)
+			.text("Skill Name")
+
+	var yScale = d3.scalePoint()
+				.domain(skills)
+				.range([250, 680]);
+
+	var yAxis = d3.axisLeft(yScale).tickSize(0);
+
+	sidebar.append("g").attr("class", "axis")
+			.attr("transform", "translate(190, 0)")
+			.style("font-size", "10px")
+			.call(yAxis); 
+
 	//Make Em!!!
 	nested.forEach(function(cluster){
 		//console.log(d)
@@ -36,31 +59,36 @@ d3.queue()
 			}
 		})
 
-		var width = titles.length*15 + 200;
+		var width = titles.length*15;
 
-		var svg = d3.select("#bigtable").append("svg")
-		.attr("class", "jobs")
-		.attr("height", 700)
-		.attr("width", width)
-		.style("overflow", "visible")
+		var svg = d3.select("#c" + (nested.indexOf(cluster) + 1)).append("svg")
+			.attr("class", "jobs")
+			.attr("height", 750)
+			.attr("width", width)
+			.style("overflow", "visible")
+
+		var tip = d3.tip()
+			  .attr('class', 'd3-tip')
+			  .offset([-20, 10])
+			  .html(function(d) {
+			    return "<b>" + d.job_title + "</b><br>" + d.skill_name + ": <style='font-weight:700,color:" + color(d.skill_job) + "'>" + d.skill_job + "</style><br>Skill Education: " + d.skill_education + "<br>Skill Gap: " + d.skill_gap; 
+			  })
+
+		svg.call(tip); 
 
 		svg.append("text")
-			.attr("x", 100)
-			.attr("y", 100)
+			.attr("x", width/2)
+			.attr("y", 720)
 			.style("font-size", 20)
+			.style("text-anchor", "middle")
 			.text(cluster.key)
-			.call(wrapt, 200)
+			.call(wrapt, 300)
 
 		var xScale = d3.scalePoint()
 				.domain(titles)
-				.range([200, width])
-
-		var yScale = d3.scalePoint()
-				.domain(skills)
-				.range([250, 680])
+				.range([30, width])
 
 		var xAxis = d3.axisTop(xScale).tickSize(0);
-		var yAxis = d3.axisLeft(yScale).tickSize(0);
 
 		svg.append("g").attr("class", "axis")
 			.attr("transform", "translate(0, 240)")
@@ -69,11 +97,6 @@ d3.queue()
 				.selectAll("text")
 				.attr("transform", "rotate(-45)")
 				.attr("text-anchor", "start");
-		
-		svg.append("g").attr("class", "axis")
-			.attr("transform", "translate(190, 0)")
-			.style("font-size", "10px")
-			.call(yAxis); 
 
 		svg.selectAll(".heats")
 		.data(cluster.values)
@@ -84,6 +107,18 @@ d3.queue()
 			.attr("x", function(d) {return xScale(d.job_title)})
 			.attr("y", function(d) {return yScale(d.skill_name)})
 			.style("fill", function(d) { return color(d.skill_gap)})
+			.on("mouseenter", function(d){
+				tip.show(d);
+				d3.select(this)
+					.style("stroke", "black")
+					.style("stroke-width", 2);
+			})
+			.on("mouseleave", function(d){
+				tip.hide(d);
+				d3.select(this)
+					.style("stroke", "none")
+					.style("stroke-width", 0);
+			})
 	})
 
 	
