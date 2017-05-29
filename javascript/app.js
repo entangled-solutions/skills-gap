@@ -51,6 +51,12 @@ d3.queue()
 
 	//Make Em!!!
 	nested.forEach(function(cluster){
+		var button = document.createElement("button");
+		button.innerHTML = cluster.key;
+		button.setAttribute('id', "b" + (nested.indexOf(cluster) + 1)); 
+		button.setAttribute('class', "button"); 
+		document.getElementById('topnav').appendChild(button);
+
 		//console.log(d)
 		var titles = [];
 		cluster.values.forEach(function(t){
@@ -121,43 +127,19 @@ d3.queue()
 			})
 	})
 
-	
-/*
-	var svg = d3.select("#bigtable").append("svg")
-		.attr("id", "jobs")
-		.attr("width", 1500)
-		.attr("height", 500)
-
-	var tip = d3.tip()
-	  .attr('class', 'd3-tip')
-	  .offset([0, 10])
-	  .html(function(d) {
-	    return d.job_title;
-	  })
-
-	svg.call(tip); 
-
-	var x = d3.scalePoint()
-				.domain(clusters)
-				.range([0, 5500])
-
-	var y = d3.scalePoint()
-				.domain(skills)
-				.range([50, 450])
-
-	//var xAxis = d3.axisBottom(x).tickSize(-400, 0, 0);
-
-	svg.selectAll(".heats")
-		.data(data)
-		.enter()
-			.append("rect")
-			.attr("width", 10)
-			.attr("height", 10)
-			.attr("x", function(d) {return x(d.career_cluster) + Math.random()*100})
-			.attr("y", function(d) {return y(d.skill_name)})
-			.style("fill", function(d) { return color(d.skill_gap)})
-*/
+	d3.selectAll("button").on("click", function(){
+		var index = this.getAttribute("id").substring(1);
+		if (this.classList.contains("clicked") == true) {
+			$("#c" + index).show();
+			$("#b" + index).removeClass("clicked");
+		} else {
+			$("#c" + index).hide();
+			$("#b" + index).addClass("clicked");
+		}
+	})
 })
+
+
 
 
 function wrapt(text, width) {

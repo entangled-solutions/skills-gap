@@ -17,8 +17,11 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-  margin-left: 20px;
   font-size: 28px;
+}
+
+#topnav {
+  margin-left: 20px;
   position: fixed;
   z-index: 9999;
 }
@@ -63,7 +66,13 @@ button {
   border: none;
   border-radius: 5px;
   color: white;
-  margin: 2px 5px;
+  margin: 2px 2px;
+  font-size: 10px;
+  outline: 0;
+}
+
+button:hover {
+  background-color: orange;
 }
 
 #occupations { 
@@ -115,4 +124,9 @@ button {
 .jobs {
   position: relative;
   float: left;
+}
+
+.clicked {
+  background-color: white;
+  color: black;
 }
