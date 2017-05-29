@@ -36,18 +36,57 @@ d3.queue()
 			.attr("y", 230)
 			.style("text-anchor", "end")
 			.style("font-size", 20)
-			.text("Skill Name")
+			.text("Skill Type")
+
+	sidebar.append("text")
+			.attr("x", 170)
+			.attr("y", 335)
+			.style("text-anchor", "end")
+			.style("font-size", 20)
+			.text("Analytical")
+
+	sidebar.append("path")
+			.attr("d", "M 200 255 180 255 180 410 200 410")
+			.style("stroke", "black")
+			.style("stroke-width", 1)
+			.style("fill", "none")
+
+	sidebar.append("text")
+			.attr("x", 160)
+			.attr("y", 480)
+			.style("text-anchor", "end")
+			.style("font-size", 20)
+			.text("Social")
+
+	sidebar.append("path")
+			.attr("d", "M 200 415 180 415 180 550 200 550")
+			.style("stroke", "black")
+			.style("stroke-width", 1)
+			.style("fill", "none")
+
+	sidebar.append("text")
+			.attr("x", 160)
+			.attr("y", 620)
+			.style("text-anchor", "end")
+			.style("font-size", 20)
+			.text("Technical")
+
+	sidebar.append("path")
+			.attr("d", "M 200 555 180 555 180 685 200 685")
+			.style("stroke", "black")
+			.style("stroke-width", 1)
+			.style("fill", "none")
 
 	var yScale = d3.scalePoint()
 				.domain(skills)
 				.range([250, 680]);
 
 	var yAxis = d3.axisLeft(yScale).tickSize(0);
-
+	/*
 	sidebar.append("g").attr("class", "axis")
 			.attr("transform", "translate(190, 0)")
 			.style("font-size", "10px")
-			.call(yAxis); 
+			.call(yAxis); */
 
 	//Make Em!!!
 	nested.forEach(function(cluster){
@@ -96,13 +135,14 @@ d3.queue()
 
 		var xAxis = d3.axisTop(xScale).tickSize(0);
 
+		/*
 		svg.append("g").attr("class", "axis")
 			.attr("transform", "translate(0, 240)")
 			.style("font-size", "10px")
 			.call(xAxis)
 				.selectAll("text")
 				.attr("transform", "rotate(-45)")
-				.attr("text-anchor", "start");
+				.attr("text-anchor", "start");*/
 
 		svg.selectAll(".heats")
 		.data(cluster.values)

@@ -108,14 +108,12 @@ button:hover {
 }
 
 #bigtable{
-  padding-top: 50px;
   overflow-x: scroll;
   width: 15000px;
   margin-left: 200px;
 }
 
 #c0 {
-  padding-top: 50px;
   position: fixed;
   background-color: white;
   z-index: 999;

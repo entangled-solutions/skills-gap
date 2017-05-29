@@ -1,36 +1,36 @@
-skill
-Reading Comprehension
-Active Listening
-Writing
-Speaking
-Mathematics
-Science
-Critical Thinking
-Active Learning
-Learning Strategies
-Monitoring
-Social Perceptiveness
-Coordination
-Persuasion
-Negotiation
-Instructing
-Service Orientation
-Complex Problem Solving
-Operations Analysis
-Technology Design
-Equipment Selection
-Installation
-Programming
-Operation Monitoring
-Operation and Control
-Equipment Maintenance
-Troubleshooting
-Repairing
-Quality Control Analysis
-Judgment and Decision Making
-Systems Analysis
-Systems Evaluation
-Time Management
-Management of Financial Resources
-Management of Material Resources
-Management of Personnel Resources
+skill,skill_type
+Active Learning,Analytical
+Complex Problem Solving,Analytical
+Critical Thinking,Analytical
+Judgment and Decision Making,Analytical
+Learning Strategies,Analytical
+Management of Financial Resources,Analytical
+Management of Material Resources,Analytical
+Mathematics,Analytical
+Monitoring,Analytical
+Operations Analysis,Analytical
+Reading Comprehension,Analytical
+Systems Analysis,Analytical
+Systems Evaluation,Analytical
+Active Listening,Social
+Coordination,Social
+Instructing,Social
+Management of Personnel Resources,Social
+Negotiation,Social
+Persuasion,Social
+Service Orientation,Social
+Social Perceptiveness,Social
+Speaking,Social
+Time Management,Social
+Writing,Social
+Equipment Maintenance,Technical
+Equipment Selection,Technical
+Installation,Technical
+Operation and Control,Technical
+Operation Monitoring,Technical
+Programming,Technical
+Quality Control Analysis,Technical
+Repairing,Technical
+Science,Technical
+Technology Design,Technical
+Troubleshooting,Technical
