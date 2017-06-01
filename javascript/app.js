@@ -42,7 +42,7 @@ d3.queue()
 			.attr("x", 170)
 			.attr("y", 335)
 			.style("text-anchor", "end")
-			.style("font-size", 20)
+			.style("font-size", 16)
 			.text("Analytical")
 
 	sidebar.append("path")
@@ -55,7 +55,7 @@ d3.queue()
 			.attr("x", 160)
 			.attr("y", 480)
 			.style("text-anchor", "end")
-			.style("font-size", 20)
+			.style("font-size", 16)
 			.text("Social")
 
 	sidebar.append("path")
@@ -68,7 +68,7 @@ d3.queue()
 			.attr("x", 160)
 			.attr("y", 620)
 			.style("text-anchor", "end")
-			.style("font-size", 20)
+			.style("font-size", 16)
 			.text("Technical")
 
 	sidebar.append("path")
@@ -180,7 +180,9 @@ d3.queue()
 })
 
 
-
+	var nested = d3.nest()
+		.key(function(d){ return d.career_cluster })
+		.entries(data)
 
 function wrapt(text, width) {
     text.each(function () {
