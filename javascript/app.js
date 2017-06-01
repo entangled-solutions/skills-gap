@@ -180,9 +180,7 @@ d3.queue()
 })
 
 
-	var nested = d3.nest()
-		.key(function(d){ return d.career_cluster })
-		.entries(data)
+
 
 function wrapt(text, width) {
     text.each(function () {
