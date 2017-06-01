@@ -17,7 +17,9 @@ d3.queue()
 		.entries(data)
 
 	//All Clusters
-
+	results[1].forEach(function(d){
+		clusters.push(d.cluster);
+	})
 
 	//All Skills
 	results[2].forEach(function(d){
