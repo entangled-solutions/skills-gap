@@ -11,58 +11,304 @@
 	<!-- Google Fonts --> <link href="styles/google-fonts.css" rel="stylesheet"> 
 	<!-- Jquery -->   <script src="lib/jquery-1.12.4.min.js"></script>
   	<script src="lib/jquery-1.12.1-ui.js"></script>
+  	<script src="lib/jquery.mousewheel.js"></script>
 	<!-- Bootstrap--> <script src="lib/bootstrap.min.js"></script> <link rel="stylesheet" href="styles/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
 </head>
 
 
 <body>
 		
-		<div id = "topnav">
-			<h1>Skills Gap Analysis</h1>
-		</div>
+        <header>
+                <div class="container clearfix hidden-xs">
+                    <div class="title left">
+                        <a href="/"><img src="assets/entangled-solutions.svg" alt="" /></a>
+                    </div>
+
+                    <div class="links right">
+                        <nav>
+                            <ul>
+                                <li class="active"><a href="/">Analysis</a></li>
+                                <!-- <li><a href="guides">Innovation Guides</a></li> -->
+                                <li><a href="http://www.entangled.solutions" target="_blank">Entangled</a></li>
+                                <!--<li><a href="projects">Projects</a></li>-->
+                                <!--<li><a href="careers">Careers</a></li>-->
+                                <!--<li><a href="contacts">Contacts</a></li>-->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+        </header>
+
+        <section id="hero">
+            <div class="content">
+                <div class="section-title">Skills Gap Analysis</div>
+                <div class="section-subtitle">for the Capella Education Company</div>
+            </div>
+            <div class="overlay"></div>
+        </section>
+
+        <!--<section class="skills container" id="topnav">-->
+        <!--</section>-->
+                
+        <!--<div id = "topnav">-->
+            <!--<h1>Skills Gap Analysis</h1>-->
+        <!--</div>-->
 		<div id = "bigframe">
-		<div>
-			<div id="c0" class="yaxis"></div>
+            <div>
+                <div id="c0" class="yaxis"></div>
+            </div>
+            <div id ="bigtable">
+                <div id="bigtabledata">
+                    <div id="c1" class="clusterblock"></div>
+                    <div id="c2" class="clusterblock"></div>
+                    <div id="c3" class="clusterblock"></div>
+                    <div id="c4" class="clusterblock"></div>
+                    <div id="c5" class="clusterblock"></div>
+                    <div id="c6" class="clusterblock"></div>
+                    <div id="c7" class="clusterblock"></div>
+                    <div id="c8" class="clusterblock"></div>
+                    <div id="c9" class="clusterblock"></div>
+                    <div id="c10" class="clusterblock"></div>
+                    <div id="c11" class="clusterblock"></div>
+                    <div id="c12" class="clusterblock"></div>
+                    <div id="c13" class="clusterblock"></div>
+                    <div id="c14" class="clusterblock"></div>
+                    <div id="c15" class="clusterblock"></div>
+                    <div id="c16" class="clusterblock"></div>
+                    <div id="c17" class="clusterblock"></div>
+                    <div id="c18" class="clusterblock"></div>
+                    <div id="c19" class="clusterblock"></div>
+                    <div id="c20" class="clusterblock"></div>
+                    <div id="c21" class="clusterblock"></div>
+                    <div id="c22" class="clusterblock"></div>
+                    <div id="c23" class="clusterblock"></div>
+                    <div id="c24" class="clusterblock"></div>
+                    <div id="c25" class="clusterblock"></div>
+                    <div id="c26" class="clusterblock"></div>
+                    <div id="c27" class="clusterblock"></div>
+                    <div id="c28" class="clusterblock"></div>
+                    <div id="c29" class="clusterblock"></div>
+                    <div id="c30" class="clusterblock"></div>
+                </div>
+            </div>
 		</div>
-		<div id ="bigtable">
-			<div id="c1" class="clusterblock"></div>
-			<div id="c2" class="clusterblock"></div>
-			<div id="c3" class="clusterblock"></div>
-			<div id="c4" class="clusterblock"></div>
-			<div id="c5" class="clusterblock"></div>
-			<div id="c6" class="clusterblock"></div>
-			<div id="c7" class="clusterblock"></div>
-			<div id="c8" class="clusterblock"></div>
-			<div id="c9" class="clusterblock"></div>
-			<div id="c10" class="clusterblock"></div>
-			<div id="c11" class="clusterblock"></div>
-			<div id="c12" class="clusterblock"></div>
-			<div id="c13" class="clusterblock"></div>
-			<div id="c14" class="clusterblock"></div>
-			<div id="c15" class="clusterblock"></div>
-			<div id="c16" class="clusterblock"></div>
-			<div id="c17" class="clusterblock"></div>
-			<div id="c18" class="clusterblock"></div>
-			<div id="c19" class="clusterblock"></div>
-			<div id="c20" class="clusterblock"></div>
-			<div id="c21" class="clusterblock"></div>
-			<div id="c22" class="clusterblock"></div>
-			<div id="c23" class="clusterblock"></div>
-			<div id="c24" class="clusterblock"></div>
-			<div id="c25" class="clusterblock"></div>
-			<div id="c26" class="clusterblock"></div>
-			<div id="c27" class="clusterblock"></div>
-			<div id="c28" class="clusterblock"></div>
-			<div id="c29" class="clusterblock"></div>
-			<div id="c30" class="clusterblock"></div>
-		</div>
-		</div>
+
+        <section class="explore-wrapper">
+            <div class="section-title">Explore</div>
+            <div style="color:black">
+                <a id="selectall" style="cursor:pointer">Select All</a> &#183 <a id="deselectall" style="cursor:pointer">Deselect All</a>
+            </div>
+            <div id="topnav">
+            </div>
+        </section>
+        <section class="skills-section">
+            <div class="container">
+              <img src="styles/images/analytical.png" class="cat-descriptors" />
+              <div class="section-title">Analytical Skills</div>
+              <table class="table table--shaded">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Skill</td>
+                    <td class="table__cell table__cell--remainder">Description</td>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Mathematics</td>
+                    <td class="table__cell table__cell--remainder">Using mathematics to solve problems.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Operations Analysis</td>
+                    <td class="table__cell table__cell--remainder">Analyzing needs and product requirements to create a design.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Complex Problem Solving</td>
+                    <td class="table__cell table__cell--remainder">Identifying complex problems and reviewing related information to develop and evaluate options and implement solutions.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Critical Thinking</td>
+                    <td class="table__cell table__cell--remainder">Using logic and reasoning to identify the strengths and weaknesses of alternative solutions, conclusions or approaches to problems.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Judgment and Decision Making</td>
+                    <td class="table__cell table__cell--remainder">Considering the relative costs and benefits of potential actions to choose the most appropriate one.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Learning Strategies</td>
+                    <td class="table__cell table__cell--remainder">Selecting and using training/instructional methods and procedures appropriate for the situation when learning or teaching new things.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Monitoring</td>
+                    <td class="table__cell table__cell--remainder">Monitoring/Assessing performance of yourself, other individuals, or organizations to make improvements or take corrective action.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Reading Comprehension</td>
+                    <td class="table__cell table__cell--remainder">Understanding written sentences and paragraphs in work related documents.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Systems Analysis</td>
+                    <td class="table__cell table__cell--remainder">Determining how a system should work and how changes in conditions, operations, and the environment will affect outcomes.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Systems Evaluation</td>
+                    <td class="table__cell table__cell--remainder">Identifying measures or indicators of system performance and the actions needed to improve or correct performance, relative to the goals of the system.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Active Learning</td>
+                    <td class="table__cell table__cell--remainder">Understanding the implications of new information for both current and future problem-solving and decision-making.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Management of Financial Resources</td>
+                    <td class="table__cell table__cell--remainder">Determining how money will be spent to get the work done, and accounting for these expenditures.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Management of Material Resources</td>
+                    <td class="table__cell table__cell--remainder">Obtaining and seeing to the appropriate use of equipment, facilities, and materials needed to do certain work.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <div class="container">
+              <img src="styles/images/social.png" class="cat-descriptors" />
+              <div class="section-title">Social Skills</div>
+              <table class="table table--shaded">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Skill</td>
+                    <td class="table__cell table__cell--remainder">Description</td>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Management of Personnel Resources</td>
+                    <td class="table__cell table__cell--remainder">Motivating, developing, and directing people as they work, identifying the best people for the job.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Active Listening</td>
+                    <td class="table__cell table__cell--remainder">Giving full attention to what other people are saying, taking time to understand the points being made, asking questions as appropriate, and not interrupting at inappropriate times.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Coordination</td>
+                    <td class="table__cell table__cell--remainder">Adjusting actions in relation to others' actions.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Instructing</td>
+                    <td class="table__cell table__cell--remainder">Teaching others how to do something.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Persuasion</td>
+                    <td class="table__cell table__cell--remainder">Persuading others to change their minds or behavior.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Social Perceptiveness</td>
+                    <td class="table__cell table__cell--remainder">Being aware of others' reactions and understanding why they react as they do.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Speaking</td>
+                    <td class="table__cell table__cell--remainder">Talking to others to convey information effectively.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Writing</td>
+                    <td class="table__cell table__cell--remainder">Communicating effectively in writing as appropriate for the needs of the audience.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Time Management</td>
+                    <td class="table__cell table__cell--remainder">Managing one's own time and the time of others.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Negotiation</td>
+                    <td class="table__cell table__cell--remainder">Bringing others together and trying to reconcile differences.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Service Orientation</td>
+                    <td class="table__cell table__cell--remainder">Actively looking for ways to help people.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="container">
+                <img src="styles/images/technical.png" class="cat-descriptors" />
+                <div class="section-title">Technical Skills</div>
+                <table class="table table--shaded">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Skill</td>
+                    <td class="table__cell table__cell--remainder">Description</td>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Equipment Maintenance</td>
+                    <td class="table__cell table__cell--remainder">Performing routine maintenance on equipment and determining when and what kind of maintenance is needed.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Equipment Selection</td>
+                    <td class="table__cell table__cell--remainder">Determining the kind of tools and equipment needed to do a job.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Operation and Control</td>
+                    <td class="table__cell table__cell--remainder">Controlling operations of equipment or systems.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Operation Monitoring</td>
+                    <td class="table__cell table__cell--remainder">Watching gauges, dials, or other indicators to make sure a machine is working properly.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Programming</td>
+                    <td class="table__cell table__cell--remainder">Writing computer programs for various purposes.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Quality Control Analysis</td>
+                    <td class="table__cell table__cell--remainder">Conducting tests and inspections of products, services, or processes to evaluate quality or performance.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Repairing</td>
+                    <td class="table__cell table__cell--remainder">Repairing machines or systems using the needed tools.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Science</td>
+                    <td class="table__cell table__cell--remainder">Using scientific rules and methods to solve problems.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Technology Design</td>
+                    <td class="table__cell table__cell--remainder">Generating or adapting equipment and technology to serve user needs.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Troubleshooting</td>
+                    <td class="table__cell table__cell--remainder">Determining causes of operating errors and deciding what to do about it.</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="UserTable__name table__cell table__cell--no-wrap">Installation</td>
+                    <td class="table__cell table__cell--remainder">Installing equipment, machines, wiring, or programs to meet specifications.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="small-container">
+                <div class="section-title">About</div>
+                <p>The heatmap shows the gap the importance of a skill to a job, and how well education prepares students for each of those skills. The skills are sorted by three core categories of skill—analytical, social, and technical. The results illustrate a skills gap for analytical and social skills across nearly all career clusters.</p>
+            </div>
+            <div class="small-container">
+                <div class="section-title">Methodology</div>
+                <p>The source data for the heatmap is from the Department of Labor’s Occupational Information Network (O*NET). O*NET assigns ratings to each skill as a measure of importance to the occupation. The scale ranges from 1 (not important) to 5 (extremely important).</p>
+                <p>Entangled Solutions developed a corresponding rating for each career cluster to measure the extent to which postsecondary education prepares learners for that particular skill. The scale ranges from 1 (no preparation) to 5 (extreme preparation). These ratings we applied to every occupation in that cluster.</p>
+                <p>The skills gap value was calculated by subtracting the job importance value from the education preparation value. A negative value (shown in reds) indicates that education is not adequately preparing students for the respective skill. A positive value (shown in greens) indicates that education is adequately preparing students for the respective skills.</p>
+            </div>
+        </section>
 
 </body>
 
 
-	<script src="javascript/app.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.2.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+	<script src="javascript/app.js"></script>
 </html>

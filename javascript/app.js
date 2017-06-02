@@ -6,9 +6,9 @@ d3.queue()
 	.defer(d3.csv, "data/data.csv")
 	.defer(d3.csv, "data/clusters.csv")
 	.defer(d3.csv, "data/skills.csv")
-	.awaitAll(function(error, results){ 
+	.awaitAll(function(error, results){
 
-	var data = results[0]; 
+	var data = results[0];
 	var clusters = [];
 	var skills = [];
 
@@ -31,23 +31,26 @@ d3.queue()
 			.attr("width", 190)
 			.attr("height", 750)
 
-	sidebar.append("text")
-			.attr("x", 190)
-			.attr("y", 230)
-			.style("text-anchor", "end")
-			.style("font-size", 20)
-			.text("Skill Type")
+	//sidebar.append("text")
+			//.attr("x", 190)
+			//.attr("y", 230)
+			//.style("text-anchor", "end")
+			//.style("font-size", 20)
+            //.style("font-weight", "bold")
+			//.style("font-family", "'Open Sans', sans-serif")
+			//.text("Skill Type")
 
 	sidebar.append("text")
 			.attr("x", 170)
 			.attr("y", 335)
 			.style("text-anchor", "end")
-			.style("font-size", 16)
-			.text("Analytical")
+			.style("font-size", 14)
+			.style("font-family", "'Open Sans', sans-serif")
+			.text("Analytical Skills")
 
 	sidebar.append("path")
 			.attr("d", "M 200 255 180 255 180 410 200 410")
-			.style("stroke", "black")
+			.style("stroke", "#1c263b")
 			.style("stroke-width", 1)
 			.style("fill", "none")
 
@@ -55,12 +58,13 @@ d3.queue()
 			.attr("x", 160)
 			.attr("y", 480)
 			.style("text-anchor", "end")
-			.style("font-size", 16)
-			.text("Social")
+			.style("font-size", 14)
+			.style("font-family", "'Open Sans', sans-serif")
+			.text("Social Skills")
 
 	sidebar.append("path")
 			.attr("d", "M 200 415 180 415 180 550 200 550")
-			.style("stroke", "black")
+			.style("stroke", "#1c263b")
 			.style("stroke-width", 1)
 			.style("fill", "none")
 
@@ -68,12 +72,13 @@ d3.queue()
 			.attr("x", 160)
 			.attr("y", 620)
 			.style("text-anchor", "end")
-			.style("font-size", 16)
-			.text("Technical")
+			.style("font-size", 14)
+			.style("font-family", "'Open Sans', sans-serif")
+			.text("Technical Skills")
 
 	sidebar.append("path")
 			.attr("d", "M 200 555 180 555 180 685 200 685")
-			.style("stroke", "black")
+			.style("stroke", "#1c263b")
 			.style("stroke-width", 1)
 			.style("fill", "none")
 
@@ -92,8 +97,8 @@ d3.queue()
 	nested.forEach(function(cluster){
 		var button = document.createElement("button");
 		button.innerHTML = cluster.key;
-		button.setAttribute('id', "b" + (nested.indexOf(cluster) + 1)); 
-		button.setAttribute('class', "button"); 
+		button.setAttribute('id', "b" + (nested.indexOf(cluster) + 1));
+		button.setAttribute('class', "button");
 		document.getElementById('topnav').appendChild(button);
 
 		//console.log(d)
@@ -116,16 +121,17 @@ d3.queue()
 			  .attr('class', 'd3-tip')
 			  .offset([-20, 10])
 			  .html(function(d) {
-			    return "<b>" + d.job_title + "</b><br>" + d.skill_name + ": <style='font-weight:700,color:" + color(d.skill_job) + "'>" + d.skill_job + "</style><br>Skill Education: " + d.skill_education + "<br>Skill Gap: " + d.skill_gap; 
+			    return "<b>" + d.job_title + "</b><br>" + d.skill_name + ": <style='font-weight:700,color:" + color(d.skill_job) + "'>" + d.skill_job + "</style><br>Skill Education: " + d.skill_education + "<br>Skill Gap: " + d.skill_gap;
 			  })
 
-		svg.call(tip); 
+		svg.call(tip);
 
 		svg.append("text")
 			.attr("x", width/2)
 			.attr("y", 720)
-			.style("font-size", 20)
+			.style("font-size", 14)
 			.style("text-anchor", "middle")
+            .style("font-weight", "bold")
 			.text(cluster.key)
 			.call(wrapt, 300)
 
@@ -156,7 +162,7 @@ d3.queue()
 			.on("mouseenter", function(d){
 				tip.show(d);
 				d3.select(this)
-					.style("stroke", "black")
+					.style("stroke", "#1c263b")
 					.style("stroke-width", 2);
 			})
 			.on("mouseleave", function(d){
@@ -177,6 +183,7 @@ d3.queue()
 			$("#b" + index).addClass("clicked");
 		}
 	})
+
 })
 
 
@@ -214,3 +221,28 @@ function wrapt(text, width) {
         }
     });
 }
+
+$('#deselectall').on("click", function(){
+    $(".button").addClass("clicked");
+    $(".clusterblock").hide();
+});
+$('#selectall').on("click", function(){
+    $(".button").removeClass("clicked");
+    $(".clusterblock").show();
+});
+
+//bodyk.addEventListener("touchmove", touchMove, false);
+
+//var touchMove = function(element, event){
+    //console.log(element);
+    //console.log(event);
+    //event.preventDefault();
+//}
+$('body').on('mousewheel', function(event) {
+    //event.preventDefault();
+
+    //console.log(event.deltaX, event.deltaY, event.deltaFactor);
+});
+window.onbeforeunload = function(e) {
+    return 'Stay on page?';
+};

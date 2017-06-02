@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box
+}
+*:focus {
+    outline: none !important
+}
+.clearfix {
+    *zoom: 1
+}
+.clearfix:after {
+    clear: both
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+.left {
+    float: left
+}
+.right {
+    float: right
+}
+
+@font-face {
+    font-family: Futura;
+    src: url("FuturaLightC.otf") format("opentype");
+}
+
+
+body {
+    font: 400 14px/16px 'Open Sans', sans-serif;
+    background: #ffffff;
+    color: #26282C;
+    min-width: 970px;
+    -webkit-text-size-adjust: 100%;
+    padding: 41px 0 0
+}
+.container {
+    position: relative;
+    width: 940px;
+    margin: 0 auto
+}
+.small-container {
+    position: relative;
+    width: 600px;
+    margin: 0 auto
+}
+section {
+    position: relative;
+    z-index: 2;
+    min-width: 970px;
+    overflow: hidden
+}
+.visible-xs {
+    display: none
+}
+.btn.red {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    background: #E45E6E;
+    border: none;
+    padding: 0;
+    text-align: center;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    -o-font-smoothing: antialiased !important
+}
+.btn.red.big {
+    font: 22px/50px 'Helvetica Neue', sans-serif;
+    padding: 0 30px
+}
+.btn.red.middle {
+    font: 18px/40px 'Helvetica Neue', sans-serif;
+    padding: 0 20px
+}
+.btn.red.small {
+    font: 16px/30px 'Helvetica Neue', sans-serif;
+    padding: 0 14px
+}
+.btn.red:hover {
+    background: #C05763
+}
+.btn.red:active {
+    background: #99414C
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 11500;
+    height: 41px;
+    background: #1C263B;
+    color: #ffffff;
+    font-family: "Futura", sans-serif
+}
+header .container {
+    padding: 0
+}
+header .title a {
+    position: relative;
+    display: block;
+    width: 215px;
+    height: 41px;
+    color: #ffffff
+}
+header .title a img {
+    display: block;
+    width: 100%;
+    margin: 8px 0 0
+}
+header .links {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    -o-font-smoothing: antialiased !important
+}
+header .links ul {
+    list-style: none;
+    margin: 0;
+    font-size: 0;
+    text-align: center
+}
+header .links ul li {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top
+}
+header .links ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font: 700 15px/41px 'Proxima Nova', sans-serif;
+    padding: 0 17px;
+    position: relative
+}
+header .links ul li a:hover,
+header .links ul li a:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1)
+}
+header .links ul li a:active {
+    background: rgba(255, 255, 255, 0.2)
+}
+header .links ul li.active a:before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: "";
+    margin: 0 0 0 -7px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #EBE5DC
+}
