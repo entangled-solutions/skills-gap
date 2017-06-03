@@ -152,7 +152,7 @@ button:hover {
   font-weight: 100;
   font-size: 12px;
   border-radius: 2px;
-  z-index: 999;
+  z-index: 21999;
   width: 200px;
 }
 
